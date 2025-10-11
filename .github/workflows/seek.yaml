@@ -32,4 +32,4 @@ jobs:
 
       - name: Push changes
         run: |
-          git push https://x-access-token:${{ VOID_SEEKER }}@github.com/${{ github.repository }}.git main
+          git push https://x-access-token:${{ secrets.VOID_SEEKER }}@github.com/nofyso/cirno-void-seeker.git main
