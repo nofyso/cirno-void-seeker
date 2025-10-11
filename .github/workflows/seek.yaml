@@ -31,7 +31,5 @@ jobs:
           git commit -m "Automated update at $(date)" || echo "No changes to commit"
 
       - name: Push changes
-        env:
-          PAT_TOKEN: ${{ secrets.VOID_SEEKER }}
         run: |
-          git push https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+          git push https://x-access-token:${{ secrets.VOID_SEEKER }}@github.com/${{ github.repository }}.git main
