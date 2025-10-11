@@ -32,6 +32,6 @@ jobs:
 
       - name: Push changes
         env:
-          PAT_TOKEN: ${{ secrets.VOID_SEEKER }}
+          VOID_SEEKER: ${{ secrets.VOID_SEEKER }}
         run: |
-          git push https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+          git push https://x-access-token:${VOID_SEEKER}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
